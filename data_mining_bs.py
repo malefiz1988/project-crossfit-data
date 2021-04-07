@@ -10,9 +10,9 @@ df_19 = pd.read_csv('./data/2019_opens_clean.csv')
 
 # Set the amount of ID's to scrape from web &
 # define the output csv-file
-amount=20000
-competitor_list = df_19[9000:amount+10000].competitorid.to_list()
-file_csv = './data/2019_opens_bs_03.csv'
+amount=1000
+competitor_list = df_19[:amount].competitorid.to_list()
+file_csv = './data/2019_opens_bs_10.csv'
 print(f"Writing, {amount} ID's to file {file_csv}")
 
 # create column names for benchmark stats dataframe

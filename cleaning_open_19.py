@@ -17,10 +17,13 @@ print('Libraries imported.')
 ftr = [60,1]
 
 # read the two datasets of 2019 - Open Athletes & Open Scores
+# and the benchmark statistics dataset
 df_19_ath = pd.read_csv('./data/2019_opens_athletes.csv')
 print('Open 2019 Athlete dataset read.')
 df_19_sco = pd.read_csv('./data/2019_opens_scores.csv')
 print('Open 2019 Score dataset read.')
+df_bs = pd.read_csv('./data/2019_opens_bs_clean.csv')
+print('Benchmark Statistics dataset read.')
 
 # drop neglected features
 ath_drop = ['competitorname', 'postcompstatus', 'profilepics3key', \
@@ -28,6 +31,8 @@ ath_drop = ['competitorname', 'postcompstatus', 'profilepics3key', \
 df_19_ath.drop(columns=ath_drop, axis=1, inplace=True)
 sco_drop = ['judge', 'scoreidentifier']
 df_19_sco.drop(columns=sco_drop, axis=1, inplace=True)
+bs_drop = ['age', 'height', 'weight']
+df_bs.drop(columns=bs_drop, axis=1, inplace=True)
 
 
 # # # # # # # # # # # # # #
@@ -196,6 +201,16 @@ df_19 = pd.merge(
     on=['competitorid', 'is_scaled', 'division'],
     how='inner'
     )
+
+df_19 = pd.merge(
+    df_19,
+    df_bs,
+    on='competitorid',
+    how='outer'
+    )
+
+# drop column 'Unnamed'
+df_19 = df_19.loc[:, ~df_19.columns.str.contains('^Unnamed')]
 
 print('Datasets combined to one dataframe.')
 
@@ -391,6 +406,7 @@ sc3 = df_19.scoredisplay_3.to_list()
 w3_5ft_reps_ohl = [] # workout 3 5ft lane reps of walking OH-lunges
 w3_reps_dbbsu = [] # workout 3 reps of DB Box Step-Ups
 w3_reps_hspu = [] # workout 3 reps of strict HSPU
+w3_hspu_status = [] # workout 3 ability to perform one strict HSPU (both scaled & Rx)
 w3_5ft_reps_hsw = [] # workout 3 5ft lane reps of HS-Walk
 w3_rounds_completed = [] # workout 3 number of rounds completed (after last rep of exercise)
 w3_tiebreak = [] # workout 3 tiebreak time (after last rep of DB Box-Stepups)
@@ -448,6 +464,15 @@ for i in range(len(sc3)):
         w3_5ft_reps_hsw.append(40)
         w3_rounds_completed.append(4.0)
 
+# filling empty list with ability to perform one strict HSPU
+for i in range(len(w3_reps_hspu)):
+    if w3_reps_hspu[i] == None:
+        w3_hspu_status.append(None)
+    elif w3_reps_hspu[i] > 0:
+        w3_hspu_status.append(1)
+    else:
+        w3_hspu_status.append(0)
+
 # filling empty list with tiebreak time (after last rep of DB Box-Stepups)
 for i in b3:
     if type(i) == float:
@@ -472,6 +497,7 @@ sc4 = df_19.scoredisplay_4.to_list()
 w4_reps_sn = [] # workout 4 reps of Snatches
 w4_reps_bp = [] # workout 4 reps of barfacing burpees
 w4_reps_bmu = [] # workout 4 reps of bar MUs
+w4_bmu_status = [] # workout 4 ability to perform one bar MU (just in Rx-version)
 w4_rounds_completed = [] # workout 4 number of rounds completed (two parts,
                          # first round ends after last burpee before first MU)
 w4_tiebreak = [] # workout 4 tiebreak time (after last rep of burpees before MU part)
@@ -571,6 +597,15 @@ for i in range(len(sc4)):
         w4_reps_bp.append(72)
         w4_reps_bmu.append(30)
         w4_rounds_completed.append(2.0)
+
+# filling empty list with the ability to perform one BMU
+for i in range(len(w4_reps_bmu)):
+    if w4_reps_bmu[i] == None:
+        w4_bmu_status.append(None)
+    elif w4_reps_bmu[i] > 0 and scaled_4[i] == 0:
+        w4_bmu_status.append(1)
+    else:
+        w4_bmu_status.append(0)
 
 # filling empty list with tiebreak time (after last burpee before first MU)
 for i in b4:
@@ -690,6 +725,7 @@ df_19['w3_reps_total'] = sc3
 df_19['w3_5ft_reps_ohl'] = w3_5ft_reps_ohl
 df_19['w3_reps_dbbsu'] = w3_reps_dbbsu
 df_19['w3_reps_hspu'] = w3_reps_hspu
+df_19['w3_hspu_status'] = w3_hspu_status
 df_19['w3_5ft_reps_hsw'] = w3_5ft_reps_hsw
 df_19['w3_rounds_completed'] = w3_rounds_completed
 df_19['w3_tiebreak'] = w3_tiebreak
@@ -699,6 +735,7 @@ df_19['w4_reps_total'] = sc4
 df_19['w4_reps_sn'] = w4_reps_sn
 df_19['w4_reps_bp'] = w4_reps_bp
 df_19['w4_reps_bmu'] = w4_reps_bmu
+df_19['w4_bmu_status'] = w4_bmu_status
 df_19['w4_rounds_completed'] = w4_rounds_completed
 df_19['w4_tiebreak'] = w4_tiebreak
 
