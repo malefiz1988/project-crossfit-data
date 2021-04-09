@@ -13,7 +13,7 @@ I really like it, because it is versatile, measurable and you can track all your
 
 ### Dataset
 
-The project deals with data from Reebok Crossfit Open 2019 and contains already provided Open Athlete's and Open Score datasets from [kaggle.com]('https://www.kaggle.com/jeanmidev/crossfit-games') as well as self-employed benchmark statistics from [crossfit.com]('https://games.crossfit.com') via webscraping:
+The project deals with data from Reebok Crossfit Open 2019 and contains already provided Open Athlete's and Open Score datasets from [kaggle.com](https://www.kaggle.com/jeanmidev/crossfit-games) as well as self-employed benchmark statistics from [crossfit.com](https://games.crossfit.com) via webscraping:
 * Athlete's statistics like height, weight, age, country of origin, etc.
 * Open workout results like time or repetitions of each competition
 * Athlete's benchmark statistics like 1RM (maximum weight of one repetition) of olympic lifts, best scores of specific benchmark workouts or personal records in bodyweight exercises
