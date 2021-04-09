@@ -3,6 +3,10 @@ Data-Driven Insights from CrossFit Competition
 
 ![CFM](./images/CFM.png)
 
+<span>Photo from CFM Crossfit Mitte in Berlin on <a href="https://urbansportsclub.com/de/venues/cfm-crossfit-mitte-berlin">Urban Sports Club</a></span>
+
+---
+
 This repository was created in the course of my final project in neuefische Data Science Bootcamp.
 
 ### CrossFit
