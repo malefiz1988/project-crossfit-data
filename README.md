@@ -35,3 +35,9 @@ In this project I am oriented towards following questions/tasks:
   - one strict Handstand Push-Up
   - one Bar Muscle-Up
 
+### File Content:
+* in the [Notebook]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/open_19_raw_data_description.ipynb') the description of the raw datasets from kaggle is done
+* [Script]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/data_mining_bs.py') is scraping benchmark statistics from the official CrossFit website
+* [Notebook]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/open_19_bs_cleaning.ipynb') documents the cleaning process of the scraped benchmark data and the [Script]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/data_cleaning_bs.py') performs it
+* [Notebook]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/open_19_cleaning.ipynb') documents the cleaning process of the provided datasets (+ combines them) and the [Script]('https://github.com/malefiz1988/project-crossfit-data/blob/detailed_work/cleaning_open_19.py') performs it
+* a well documented EDA-Notebook is still in progress
