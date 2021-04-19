@@ -40,4 +40,12 @@ In this project I am oriented towards following questions/tasks:
   - one Bar Muscle-Up
 
 ### File Content:
-* abc
+1. Data Mining
+2. Raw Data Description
+3. Data Cleaning
+4. EDA
+5. Missing Data Analysis
+6. Data Preparation
+7. Regression Modelling
+8. Sensitivity Analysis
+9. Classification Modelling
