@@ -11,9 +11,7 @@ import plotly.io as pio
 from matplotlib import pyplot as plt
 import matplotlib.patches as mpatches
 import squarify
-
 import EDA_plots as plot
-
 import warnings
 
 # set options
@@ -26,10 +24,7 @@ pio.renderers.default = 'iframe' # or 'notebook' or 'colab'
 #sns.set_style('white')
 sns.set_context("talk")
 
-
 ##########
-
-
 
 def gender_distribution(data):
     plt.figure(figsize=(7,4))
@@ -715,7 +710,7 @@ def regional_participation(df):
         data=df,
         x='region',
         hue='gender',
-        order=df.region.value_counts().iloc[:6].index,
+        order=df.region.value_counts().iloc[:7].index,
         edgecolor='black',
         palette={"F": "gold", "M": "limegreen"}
     )
@@ -733,7 +728,7 @@ def regional_ranking(df):
         x='region',
         y='overallrank',
         hue='gender',
-        order=df.region.value_counts().iloc[:6].index,
+        order=df.region.value_counts().iloc[:7].index,
         edgecolor='black',
         palette={"F": "gold", "M": "limegreen"}
     )
