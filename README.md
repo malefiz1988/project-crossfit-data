@@ -42,7 +42,7 @@ In this project I am oriented towards following questions/tasks:
 ### File Content:
 1. [Data Mining](https://github.com/malefiz1988/project-crossfit-data/blob/main/1_Data_Mining.py)
 2. [Raw Data Description](https://github.com/malefiz1988/project-crossfit-data/blob/main/2_Raw_Data_Description.ipynb)
-3. Data Cleaning
+3. Data Cleaning of [Benchmark Statistics](https://github.com/malefiz1988/project-crossfit-data/blob/main/3_Data_Cleaning_bs.ipynb) and [full Dataset](https://github.com/malefiz1988/project-crossfit-data/blob/main/3_Data_Cleaning_19.ipynb)
 4. EDA
 5. Missing Data Analysis
 6. Data Preparation
