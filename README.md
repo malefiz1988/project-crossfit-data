@@ -45,7 +45,6 @@ In this project I am oriented towards following questions/tasks:
 3. Data Cleaning of [Benchmark Statistics](https://github.com/malefiz1988/project-crossfit-data/blob/main/3_Data_Cleaning_bs.ipynb) and [full Dataset](https://github.com/malefiz1988/project-crossfit-data/blob/main/3_Data_Cleaning_19.ipynb)
 4. EDA [Notebook](https://github.com/malefiz1988/project-crossfit-data/blob/main/4_EDA.ipynb) and [Script](https://github.com/malefiz1988/project-crossfit-data/blob/main/EDA_plots.py) with plot-functions
 5. [Missing Data Analysis](https://github.com/malefiz1988/project-crossfit-data/blob/main/5_Missing_Data_Analysis.ipynb)
-6. Data Preparation
-7. Regression Modelling
-8. Sensitivity Analysis
-9. Classification Modelling
+6. [Data Preparation](https://github.com/malefiz1988/project-crossfit-data/blob/main/6_Data_Preparation.ipynb)
+7. Regression Model and Sensitivity Analysis [Notebook](https://github.com/malefiz1988/project-crossfit-data/blob/main/7_Regression_and_Sensitivity_Analysis.ipynb)
+8. Classification Model
