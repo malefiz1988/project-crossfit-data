@@ -33,11 +33,10 @@ Possible insights from competition data could help:
 
 In this project I am oriented towards following questions/tasks:
 * Are the workouts in the CrossFit Open 2019 well-balanced regarding gender and/or level of performance?
-* Which exercises are weak points in competitor's performance?
 * What has the most significant impact on my ranking?
 * Is it possible to predict workout scores? - Classifying the ability to perform or not perform:
-  - one strict Handstand Push-Up
-  - one Bar Muscle-Up
+  - one strict Handstand Push-Up (HSPU)
+  - one Bar Muscle-Up (BMU)
 
 ### File Content:
 1. [Data Mining](https://github.com/malefiz1988/project-crossfit-data/blob/main/1_Data_Mining.py)
@@ -47,4 +46,4 @@ In this project I am oriented towards following questions/tasks:
 5. [Missing Data Analysis](https://github.com/malefiz1988/project-crossfit-data/blob/main/5_Missing_Data_Analysis.ipynb)
 6. [Data Preparation](https://github.com/malefiz1988/project-crossfit-data/blob/main/6_Data_Preparation.ipynb)
 7. Regression Model and Sensitivity Analysis [Notebook](https://github.com/malefiz1988/project-crossfit-data/blob/main/7_Regression_and_Sensitivity_Analysis.ipynb)
-8. Classification Model
+8. Classification Model on HSPU and BMU prediction
