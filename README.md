@@ -46,4 +46,4 @@ In this project I am oriented towards following questions/tasks:
 5. [Missing Data Analysis](https://github.com/malefiz1988/project-crossfit-data/blob/main/5_Missing_Data_Analysis.ipynb)
 6. [Data Preparation](https://github.com/malefiz1988/project-crossfit-data/blob/main/6_Data_Preparation.ipynb)
 7. Regression Model and Sensitivity Analysis [Notebook](https://github.com/malefiz1988/project-crossfit-data/blob/main/7_Regression_and_Sensitivity_Analysis.ipynb)
-8. Classification Model on HSPU and BMU prediction
+8. Classification Model on [HSPU](https://github.com/malefiz1988/project-crossfit-data/blob/main/8_Classification_HSPU.ipynb) and [BMU](https://github.com/malefiz1988/project-crossfit-data/blob/main/8_Classification_BMU.ipynb) prediction
